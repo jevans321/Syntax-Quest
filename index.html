@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Programming Syntax Practice Tool</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 50%;
+      max-width: 600px;
+    }
+
+    .code {
+      font-family: monospace;
+      color: #333;
+      background-color: #fafafa;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+
+    .highlight {
+      font-weight: bold;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+      background-color: #fff;
+    }
+
+    .feedback {
+      margin-top: 10px;
+    }
+
+    .feedback-box {
+      background-color: #505c66;
+      /* Dark gray color */
+      border: 1px solid #39434d;
+      /* Slightly darker border for depth */
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+      height: 50px;
+      /* Fixed height */
+      display: flex;
+      align-items: center;
+      /* Vertically center the text */
+      justify-content: center;
+      /* Horizontally center the text */
+      color: #f0f4f8;
+      /* Light color for general text */
+    }
+
+    .valid {
+      color: #7bed9f;
+      /* Significantly brighter green for valid feedback */
+    }
+
+    .invalid {
+      color: #fda1a1;
+      /* Significantly brighter red for invalid feedback */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="level-selector">
+      <label for="difficultyLevel">Select Difficulty Level:</label>
+      <select id="difficultyLevel">
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+      </select>
+    </div>
+
+    <div class="language-selector">
+      <label for="sourceLanguage">Source Language:</label>
+      <select id="sourceLanguage">
+        <option value="javascript">JavaScript</option>
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+        <option value="php">PHP</option>
+      </select>
+
+      <label for="targetLanguage">Target Language:</label>
+      <select id="targetLanguage">
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+        <option value="php">PHP</option>
+        <option value="javascript">JavaScript</option>
+      </select>
+    </div>
+
+    <div id="codeSnippet" class="code">
+      <!-- Exercises will be dynamically loaded here -->
+    </div>
+    <!-- Feedback box -->
+    <div id="feedbackBox" class="feedback-box">
+      <span id="feedback" class="invalid"></span> <!-- Feedback message will be shown here -->
+    </div>
+  </div>
+  <script src="script.js" type="module"></script> <!-- Ensure your JavaScript logic is in script.js -->
+</body>
+
+</html>
